@@ -1,109 +1,57 @@
-import gulp from "gulp";
-import sass from "gulp-sass";
-import dartSass from "sass";
-import postcss from "gulp-postcss";
-import autoprefixer from "autoprefixer";
-import cssnano from "cssnano";
-import terser from "gulp-terser";
-import babel from "gulp-babel";
-import htmlmin from "gulp-htmlmin";
-import imagemin from "gulp-imagemin";
-import webp from "gulp-webp";
-import newer from "gulp-newer";
-import concat from "gulp-concat";
-import rename from "gulp-rename";
-import clean from "gulp-clean";
-import gulpIf from "gulp-if";
-import size from "gulp-size";
-import browserSync from "browser-sync";
+import gulp from 'gulp';
+import browserSync from 'browser-sync';
 
-// Создаем объект с методами gulp
-const { src, dest, watch, series, parallel } = gulp;
+import { paths } from './gulp/config/paths.js';
+import { clean } from './gulp/tasks/clean.js';
+import { svgSprites } from './gulp/tasks/sprite.js';
+import { styles } from './gulp/tasks/styles.js';
+import { stylesBackend } from './gulp/tasks/styles-backend.js';
+import { scripts } from './gulp/tasks/scripts.js';
+import { scriptsBackend } from './gulp/tasks/scripts-backend.js';
+import { resources } from './gulp/tasks/resources.js';
+import { images } from './gulp/tasks/images.js';
+import { webpImages } from './gulp/tasks/webp.js';
+import { htmlInclude } from './gulp/tasks/html-include.js';
+import { cacheTask } from './gulp/tasks/cache.js';
+import { rewrite } from './gulp/tasks/rewrite.js';
+import { htmlMinify } from './gulp/tasks/html-minify.js';
+import { zipFiles } from './gulp/tasks/zip.js';
 
-// Инициализируем gulp-sass
-const sassCompiler = sass(dartSass);
-
-// Флаги для режимов (dev/prod)
-const isProd = process.argv.includes("--prod");
-
-// Пути
-const paths = {
-  html: "src/**/*.html",
-  scss: "src/scss/**/*.scss",
-  js: "src/js/**/*.js",
-  img: "src/img/**/*.{jpg,jpeg,png,svg,gif}",
-  dist: "dist/",
-};
-
-// Очистка папки dist
-export function clear() {
-  return src(paths.dist, { allowEmpty: true }).pipe(clean());
+global.app = {
+  gulp,
+  isProd: process.argv.includes('--build'),
+  paths,
 }
 
-// Обработка HTML
-export function html() {
-  return src(paths.html)
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(size({ title: "HTML" }))
-    .pipe(dest(paths.dist))
-    .pipe(browserSync.stream());
-}
-
-// Обработка SCSS
-export function styles() {
-  return src(paths.scss)
-    .pipe(sassCompiler().on("error", sassCompiler.logError))
-    .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(rename({ suffix: ".min" }))
-    .pipe(size({ title: "CSS" }))
-    .pipe(dest(paths.dist + "css"))
-    .pipe(browserSync.stream());
-}
-
-// Обработка JavaScript
-export function scripts() {
-  return src(paths.js)
-    .pipe(babel({ presets: ["@babel/preset-env"] }))
-    .pipe(terser())
-    .pipe(rename({ suffix: ".min" }))
-    .pipe(size({ title: "JS" }))
-    .pipe(dest(paths.dist + "js"))
-    .pipe(browserSync.stream());
-}
-
-// Оптимизация изображений
-export function images() {
-  return src(paths.img)
-    .pipe(newer(paths.dist + "img"))
-    .pipe(imagemin({ optimizationLevel: 5 }))
-    .pipe(size({ title: "Images" }))
-    .pipe(dest(paths.dist + "img"));
-}
-
-// Конвертация изображений в WebP
-export function webpImages() {
-  return src(paths.img)
-    .pipe(newer(paths.dist + "img"))
-    .pipe(webp())
-    .pipe(size({ title: "WebP" }))
-    .pipe(dest(paths.dist + "img"));
-}
-
-// Локальный сервер
-export function serve() {
+const watcher = () => {
   browserSync.init({
-    server: { baseDir: paths.dist },
+    server: {
+      baseDir: `${app.paths.base.build}`
+    },
     notify: false,
-    open: true,
+    port: 3000,
   });
 
-  watch(paths.html, html);
-  watch(paths.scss, styles);
-  watch(paths.js, scripts);
-  watch(paths.img, images);
+  gulp.watch(app.paths.srcScss, styles);
+  gulp.watch(app.paths.srcFullJs, scripts);
+  gulp.watch(`${app.paths.srcPartialsFolder}/*.html`, htmlInclude);
+  gulp.watch(`${app.paths.base.src}/*.html`, htmlInclude);
+  gulp.watch(`${app.paths.resourcesFolder}/**`, resources);
+  gulp.watch(`${app.paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`, images);
+  gulp.watch(`${app.paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, webpImages);
+  gulp.watch(app.paths.srcSvg, svgSprites);
 }
 
-// Сборка проекта
-export const build = series(clear, parallel(html, styles, scripts, images, webpImages));
-export const dev = series(build, serve);
-export default build;
+const dev = gulp.series(clean, htmlInclude, scripts, styles, resources, images, webpImages, svgSprites, watcher);
+const backend = gulp.series(clean, htmlInclude, scriptsBackend, stylesBackend, resources, images, webpImages, svgSprites);
+const build = gulp.series(clean, htmlInclude, scripts, styles, resources, images, webpImages, svgSprites, htmlMinify);
+const cache = gulp.series(cacheTask, rewrite);
+const zip = zipFiles;
+
+export { dev }
+export { build }
+export { backend }
+export { cache }
+export { zip }
+
+gulp.task('default', dev);
