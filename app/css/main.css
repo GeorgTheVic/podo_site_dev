@@ -1,5 +1,6 @@
 :root {
   --font-family: "Inter", sans-serif;
+  --second-family: "Raleway", sans-serif;
   --content-width: 1320px;
   --container-offset: 60px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
@@ -79,6 +80,7 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 0px;
   margin: 0px;
   border: none;
+  color: #000;
 }
 
 a, a:link, a:visited {
@@ -181,4 +183,103 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.header {
+  padding: 27px 0 40px;
+  height: 157px;
+  background: right 0%/75% no-repeat url(/img/header/header-print.png);
+}
+.header__inner {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.header__links {
+  position: absolute;
+  right: 0;
+  top: -17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+  -ms-grid-row-align: start;
+  align-self: start;
+  gap: 37px;
+}
+.header__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 16px;
+}
+.header__svg {
+  width: 30px;
+  height: 30px;
+}
+.header__text {
+  font-weight: 400;
+  font-size: 20px;
+  color: #fff;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.title__header {
+  font-family: var(--second-family);
+  font-weight: 500;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+.title__header-small {
+  font-size: 28px;
+}
+.title__header-big {
+  font-size: 39px;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+  -ms-grid-row-align: end;
+  align-self: end;
+  font-weight: 400;
+  font-size: 20px;
+}
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 60px;
+}
+.nav__item-blue {
+  padding: 12px 18px;
+  border-radius: 8px;
+  background-color: #00A4D7;
+}
+.nav__link {
+  color: #000;
+}
+.nav__link-white {
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */

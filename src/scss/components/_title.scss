@@ -1,0 +1,16 @@
+.title {
+  &__header {
+    font-family: var(--second-family);
+    font-weight: 500;
+    line-height: 110%;
+    text-transform: uppercase;
+
+    &-small {
+      font-size: 28px;
+    }
+
+    &-big {
+      font-size: 39px;
+    }
+  }
+}
