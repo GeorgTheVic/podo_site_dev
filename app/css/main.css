@@ -344,4 +344,56 @@ a {
 .intro__svg {
   width: 30px;
   height: 30px;
+}
+
+.about {
+  position: relative;
+  padding: 130px 0 115px;
+}
+.about__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.about__rectangle {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  z-index: -100;
+  width: 70%;
+  height: 91px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(-15.04%, #80B53D), color-stop(103.48%, #00A4D7));
+  background: linear-gradient(90deg, #80B53D -15.04%, #00A4D7 103.48%);
+  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+  -ms-transform: matrix(-1, 0, 0, 1, 0, 0);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.about__rectangle::after {
+  content: "";
+  position: absolute;
+  margin: -20px;
+  width: 60px;
+  height: 120px;
+  -webkit-transform: rotate(25deg);
+  -ms-transform: rotate(25deg);
+  transform: rotate(25deg);
+  background-color: #fff;
+}
+.about__title {
+  margin-bottom: 28px;
+  font-weight: 400;
+  font-size: 30px;
+  color: #fff;
+}
+.about__subtitle {
+  margin-bottom: 30px;
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 86px;
+  text-transform: uppercase;
+}
+.about__text {
+  max-width: 980px;
+  font-weight: 400;
+  font-size: 20px;
 }/*# sourceMappingURL=main.css.map */

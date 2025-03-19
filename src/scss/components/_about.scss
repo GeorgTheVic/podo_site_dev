@@ -1,3 +1,51 @@
 .about {
-  
+  position: relative;
+  padding: 130px 0 115px;
+
+  &__inner {
+    display: flex;
+    
+  }
+
+  &__rectangle {
+    position: absolute;
+    left: 0;
+    top: 100px;
+    z-index: -100;
+    width: 70%;
+    height: 91px;
+    background: linear-gradient(90deg, #80B53D -15.04%, #00A4D7 103.48%);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+
+    &::after {
+      content: "";
+      position: absolute;
+      margin: -20px;
+      width: 60px;
+      height: 120px;
+      transform: rotate(25deg);
+      background-color: #fff;
+    }
+  }
+
+  &__title {
+    margin-bottom: 28px;
+    font-weight: 400;
+    font-size: 30px;
+    color: #fff;
+  }
+
+  &__subtitle {
+    margin-bottom: 30px;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 86px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    max-width: 980px;
+    font-weight: 400;
+    font-size: 20px;
+  }
 }
