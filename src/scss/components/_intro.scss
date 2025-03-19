@@ -1,0 +1,55 @@
+.intro {
+  background: url(/img/intro/intro-bg.jpg) center center/cover no-repeat;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 200px 0 100px;
+  } 
+
+  &__title {
+    margin-bottom: 62px;
+    font-family: var(--second-family);
+    font-weight: 800;
+    font-size: 113px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+  }
+
+  &__subtitle {
+    margin-bottom: 43px;
+    font-weight: 400;
+    font-size: 47px;
+    text-align: center;
+    color: #fff;
+  }
+
+  &__usp {
+    margin-bottom: 83px;
+    font-weight: 400;
+    font-size: 47px;
+    color: #fff;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border-radius: 20px;
+    width: 513px;
+    height: 89px;
+    background-color: #3d2a79;
+
+    font-weight: 600;
+    font-size: 26px;
+    color: #fff;
+  }
+
+  &__svg {
+    width: 30px;
+    height: 30px;
+  }
+}
