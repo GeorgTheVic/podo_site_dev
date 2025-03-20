@@ -1,0 +1,35 @@
+.statistics {
+  padding: 95px 0;
+  background: url(/img/statistics/statistics-bg.jpg) center center/cover no-repeat;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 400;
+    font-size: 54px;
+    color: #fff;
+
+    border-radius: 20px;
+    width: 419px;
+    height: 175px;
+    background-color: #00A4D7;
+
+    &-middle {
+      font-weight: 500;
+      font-size: 33px;
+    }
+
+    &-small {
+      font-size: 26px;
+    }
+  }
+}
