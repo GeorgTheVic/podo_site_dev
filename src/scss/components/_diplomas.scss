@@ -1,0 +1,26 @@
+.diplomas {
+  padding: 100px 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 47px;
+
+    text-align: center;
+  }
+
+  &__slider {
+    display: flex;
+    gap: 28px;
+  }
+
+  &__arrow {
+    cursor: pointer;
+  }
+}
