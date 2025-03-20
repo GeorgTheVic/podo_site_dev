@@ -1,3 +1,59 @@
 .team {
-  
+  padding: 100px 0;
+  position: relative;
+
+  &__rectangle {
+    position: absolute;
+    right: 0;
+    top: 100px;
+    z-index: -100;
+    width: 50%;
+    height: 58px;
+    background: linear-gradient(90deg, #80b53d 0%, #00a4d7 100%);
+    ;
+
+    &::after {
+      content: "";
+      position: absolute;
+      margin: -20px;
+      width: 60px;
+      height: 120px;
+      transform: rotate(25deg);
+      background-color: #fff;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__right {
+    padding: 11px 0;
+    text-align: right;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    font-weight: 400;
+    font-size: 30px;
+    color: #fff;
+  }
+
+  &__name {
+    margin-bottom: 45px;
+    font-weight: 400;
+    font-size: 79px;
+  }
+
+  &__description {
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 49px;
+  }
+
+  &__experience {
+    font-weight: 400;
+    font-size: 61px;
+  }
 }

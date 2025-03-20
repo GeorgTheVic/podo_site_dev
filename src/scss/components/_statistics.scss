@@ -5,7 +5,8 @@
   &__inner {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    justify-content: space-around;
+    gap: 20px;
   }
 
   &__block {
@@ -14,6 +15,7 @@
     align-items: center;
     justify-content: center;
 
+    margin-bottom: 30px;
     font-weight: 400;
     font-size: 54px;
     color: #fff;
@@ -30,6 +32,10 @@
 
     &-small {
       font-size: 26px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }
