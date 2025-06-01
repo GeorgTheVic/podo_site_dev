@@ -14,13 +14,49 @@
     padding: 8px 15px;
     border-radius: 8px;
     background-color: #00A4D7;
+
+    transition: transform .3s ease-in-out;
   }
 
   &__link {
+    position: relative;
     color: #000;
+
+    &:hover {
+      color: #fff;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        display: block;
+        width: 130%;
+        height: 130%;
+        background-color: #00A4D7;
+        border-radius: 5px;
+        transform: translate(-50%, -50%);
+      }
+    }
 
     &-white {
       color: #fff;
+
+      &:hover {
+
+        &::before {
+          content: '';
+          display: block;
+          width: 0;
+          height: 0;
+        }
+      }
     }
+  }
+
+
+  &__item-blue:hover {
+    transform: scale(1.1);
   }
 }

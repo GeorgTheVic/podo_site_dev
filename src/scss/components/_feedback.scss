@@ -1,0 +1,28 @@
+.feedback {
+  padding: 100px 0;
+  background: url(/img/feedback/feedback-bg.jpg) center center/cover no-repeat;
+
+  &__title {
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 47px;
+    color: #fff;
+
+    text-align: center;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__slider {
+    display: flex;
+    gap: 28px;
+  }
+
+  &__arrow {
+    cursor: pointer;
+  }
+}
