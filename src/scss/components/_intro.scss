@@ -46,6 +46,12 @@
     font-weight: 600;
     font-size: 26px;
     color: #fff;
+
+    transition: transform .3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   &__svg {

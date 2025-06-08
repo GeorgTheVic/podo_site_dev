@@ -1,6 +1,10 @@
 .diplomas {
   padding: 100px 0;
 
+  &__inner {
+    position: relative;
+  }
+
   &__title {
     margin-bottom: 40px;
     font-weight: 400;
@@ -9,18 +13,29 @@
     text-align: center;
   }
 
-  &__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  &__swiper {
+    width: 85%;
+    height: 100%;
   }
 
-  &__slider {
+  &__slide {
     display: flex;
-    gap: 28px;
+    justify-content: center;
   }
+}
 
-  &__arrow {
-    cursor: pointer;
-  }
+.diplomas-button-prev {
+  border-radius: 8px;
+  color: #fff;
+  width: 81px;
+  height: 81px;
+  background: #00a4d7;
+}
+
+.diplomas-button-next {
+  border-radius: 8px;
+  color: #fff;
+  width: 81px;
+  height: 81px;
+  background: #00a4d7;
 }

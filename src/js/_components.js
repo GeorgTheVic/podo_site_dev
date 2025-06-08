@@ -1,1 +1,4 @@
-console.log('components');
+import './components/team-swiper.js'
+import './components/diplomas-swiper.js'
+import './components/feedback-swiper.js'
+import './components/services-swiper.js'

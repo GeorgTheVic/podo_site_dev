@@ -1,6 +1,6 @@
 .feedback {
   padding: 100px 0;
-  background: url(/img/feedback/feedback-bg.jpg) center center/cover no-repeat;
+  background: url(/img/feedback/feedback-bg.jpg)  center/cover no-repeat;
 
   &__title {
     margin-bottom: 40px;
@@ -12,17 +12,43 @@
   }
 
   &__inner {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
-  &__slider {
+  &__swiper {
+    width: 85%;
+    height: 100%;
+  }
+
+  &__slide {
     display: flex;
-    gap: 28px;
+    justify-content: center;
   }
 
   &__arrow {
     cursor: pointer;
   }
+}
+
+.feedback-button-prev {
+  top: 0;
+  transform: translateY(50%);
+  border-radius: 8px;
+  color: #fff;
+  width: 81px;
+  height: 81px;
+  background: #3D2A79;
+}
+
+.feedback-button-next {
+  top: 0;
+  transform: translateY(50%);
+  border-radius: 8px;
+  color: #fff;
+  width: 81px;
+  height: 81px;
+  background: #3D2A79;
 }
