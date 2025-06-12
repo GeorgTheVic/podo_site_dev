@@ -9,6 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
       el: '.services__pagination',
       clickable: true,
     },
+    navigation: {
+      nextEl: '.services-button-next',
+      prevEl: '.services-button-prev',
+    },
     // autoplay: true,
     delay: 5000,
     loop: true
