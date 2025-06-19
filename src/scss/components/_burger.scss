@@ -1,0 +1,40 @@
+.burger {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  align-self: end;
+
+  border-radius: 10px;
+  background-color: #00A4D7;
+
+  @include tablet-min {
+    display: none;
+  }
+
+  @include mobile {
+    align-self: center;
+  }
+
+  &__line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    display: block;
+    width: 25px;
+    height: 3px;
+    border-radius: 3px;
+
+    background-color: #fff;
+
+    &:first-child {
+      margin-top: -9px;
+    }
+
+    &:last-child {
+      margin-top: 9px;
+    }
+  }
+}

@@ -1,4 +1,8 @@
 .nav {
+  @include tablet {
+    display: none; 
+  }
+
   display: flex;
   align-self: end;
   font-weight: 400;

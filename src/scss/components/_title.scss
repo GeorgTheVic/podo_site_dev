@@ -6,10 +6,18 @@
     text-transform: uppercase;
 
     &-small {
+      @include tablet {
+        font-size: 18px;
+      }
+
       font-size: 28px;
     }
 
     &-big {
+      @include tablet {
+        font-size: 26px;
+      }
+
       font-size: 39px;
     }
   }

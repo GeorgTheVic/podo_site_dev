@@ -6,8 +6,26 @@
   }
 }
 
+@mixin big-desktop-min-1886 {
+  @media (min-width: (1886px)) {
+    @content;
+  }
+}
+
 @mixin big-desktop {
   @media (max-width: (1440px)) {
+    @content;
+  }
+}
+
+@mixin tablet-max-1144 {
+  @media (max-width: (1144px)) {
+    @content;
+  }
+}
+
+@mixin tablet-min {
+  @media (min-width: (1024px)) {
     @content;
   }
 }

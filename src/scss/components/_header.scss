@@ -1,7 +1,23 @@
 .header {
+  @include big-desktop-min-1886 {
+    background: right 0% / 70% 100% no-repeat url('../img/header/header-print.png');
+  }
+
+  @include tablet-max-1144 {
+    background: right 0% / 68% 100% no-repeat url('../img/header/header-print.png');
+  }
+
+  @include small-tablet {
+    background: right 0% / 60% 100% no-repeat url('../img/header/header-print.png');
+  }
+
+  @include mobile {
+    padding: 20px 0;
+    background: none;
+  }
+
   padding: 27px 0 40px;
-  height: 145px;
-  background: right 0% / 75% no-repeat url(/img/header/header-print.png);
+  background: right 0% / 75% 100% no-repeat url('../img/header/header-print.png');
 
   &__inner {
     position: relative;
@@ -10,6 +26,10 @@
   }
 
   &__links {
+    @include mobile {
+      display: none;
+    }
+
     position: absolute;
     right: 0;
     top: -17px;
@@ -30,6 +50,10 @@
   }
 
   &__text {
+    @include tablet-max-1144 {
+      display: none;
+    }
+
     font-weight: 400;
     font-size: 20px;
     color: #fff;
