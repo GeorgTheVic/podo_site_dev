@@ -1,11 +1,15 @@
 .intro {
-  background: url(/img/intro/intro-bg.jpg) center center/cover no-repeat;
+  background: url('../img/intro/intro-bg.jpg') center center/cover no-repeat;
 
   &__inner {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 200px 0 100px;
+
+    @include small-tablet {
+      padding: 100px 0 ;
+    }
   } 
 
   &__title {
@@ -16,6 +20,10 @@
     text-transform: uppercase;
     text-align: center;
     color: #fff;
+
+    @include small-tablet {
+      font-size: 45px;
+    }
   }
 
   &__subtitle {
@@ -24,6 +32,14 @@
     font-size: 47px;
     text-align: center;
     color: #fff;
+
+    @include big-desktop {
+      font-size: 25px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 
   &__usp {
@@ -31,6 +47,19 @@
     font-weight: 400;
     font-size: 47px;
     color: #fff;
+    text-align: center;
+
+    @include big-desktop {
+      font-size: 25px;
+    }
+
+    @include small-tablet {
+      font-size: 20px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 
   &__button {
@@ -38,9 +67,8 @@
     justify-content: center;
     align-items: center;
     gap: 12px;
+    padding: 20px 40px;
     border-radius: 20px;
-    width: 513px;
-    height: 89px;
     background-color: #3d2a79;
 
     font-weight: 600;
@@ -51,6 +79,14 @@
 
     &:hover {
       transform: scale(1.1);
+    }
+
+    @include small-tablet {
+      font-size: 20px;
+    }
+
+    @include mobile {
+      font-size: 16px;
     }
   }
 

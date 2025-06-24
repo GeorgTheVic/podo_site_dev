@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Autoplay, Mousewheel, Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
 document.addEventListener('DOMContentLoaded', () => {
   const team_swiper = new Swiper('.team-swiper', {

@@ -135,7 +135,7 @@
         </p>
       </div>
       <div class="about__right">
-        <picture>
+        <picture >
           <source srcset="img/about/logo.webp" type="image/webp">
           <img loading="lazy" src="img/about/logo.jpg" class="image" width="305" height="432" alt="Логотип">
         </picture>
@@ -168,9 +168,9 @@
         <div class="swiper-wrapper team-wrapper">
           <div class="swiper-slide team__slide">
 
-            <picture>
-              <source srcset="img/team/team-1.webp" type="image/webp">
-              <img loading="lazy" src="img/team/team-1.jpg" class="team__img" width="531" height="649" alt="Врач">
+            <picture class="team__img">
+              <source srcset="img/team/team-1.webp" type="image/webp" team="team__photo">
+              <img loading="lazy" src="img/team/team-1.jpg" team="team__photo" width="531" height="649" alt="Врач">
             </picture>
 
             <div class="team__right">
@@ -188,10 +188,11 @@
               </p>
             </div>
           </div>
+
           <div class="swiper-slide team__slide">
-            <picture>
-              <source srcset="img/team/team-1.webp" type="image/webp">
-              <img loading="lazy" src="img/team/team-1.jpg" class="team__img" width="531" height="649" alt="Врач">
+            <picture class="team__img">
+              <source srcset="img/team/team-1.webp" type="image/webp" team="team__photo">
+              <img loading="lazy" src="img/team/team-1.jpg" team="team__photo" width="531" height="649" alt="Врач">
             </picture>
 
             <div class="team__right">
@@ -209,10 +210,11 @@
               </p>
             </div>
           </div>
+
           <div class="swiper-slide team__slide">
-            <picture>
-              <source srcset="img/team/team-1.webp" type="image/webp">
-              <img loading="lazy" src="img/team/team-1.jpg" class="team__img" width="531" height="649" alt="Врач">
+            <picture class="team__img">
+              <source srcset="img/team/team-1.webp" type="image/webp" team="team__photo">
+              <img loading="lazy" src="img/team/team-1.jpg" team="team__photo" width="531" height="649" alt="Врач">
             </picture>
 
             <div class="team__right">
@@ -231,8 +233,9 @@
             </div>
           </div>
         </div>
-        <div class="swiper-pagination team__pagination"></div>
       </div>
+
+      <div class="swiper-pagination team__pagination"></div>
 
     </div>
   </div>

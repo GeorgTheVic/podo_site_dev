@@ -2,8 +2,31 @@
   position: relative;
   padding: 130px 0 115px;
 
+  @include small-tablet {
+    padding: 50px 0 50px;
+  }
+
   &__inner {
     display: flex;
+  }
+
+  &__left {
+    width: 60%;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__rectangle {
@@ -25,6 +48,12 @@
       transform: rotate(25deg);
       background-color: #fff;
     }
+
+    @include small-tablet {
+      top: 45px;
+
+      height: 40px;
+    }
   }
 
   &__title {
@@ -40,6 +69,10 @@
     font-weight: 600;
     font-size: 86px;
     text-transform: uppercase;
+
+    @include tablet {
+      font-size: 46px;
+    }
   }
 
   &__text {
