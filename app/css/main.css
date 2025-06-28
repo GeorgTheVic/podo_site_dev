@@ -703,7 +703,7 @@ a {
 
 .statistics {
   padding: 95px 0;
-  background: url(/img/statistics/statistics-bg.jpg) center center/cover no-repeat;
+  background: url("../img/statistics/statistics-bg.jpg") center center/cover no-repeat;
 }
 .statistics__inner {
   display: -webkit-box;
@@ -1019,7 +1019,7 @@ a {
 
 .feedback {
   padding: 100px 0;
-  background: url(/img/feedback/feedback-bg.jpg) center/cover no-repeat;
+  background: url("../img/feedback/feedback-bg.jpg") center/cover no-repeat;
 }
 @media (max-width: 576px) {
   .feedback {

@@ -1,6 +1,6 @@
 .feedback {
   padding: 100px 0;
-  background: url(/img/feedback/feedback-bg.jpg) center/cover no-repeat;
+  background: url('../img/feedback/feedback-bg.jpg') center/cover no-repeat;
 
   @include mobile {
     padding: 30px 0 170px;
