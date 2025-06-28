@@ -1,3 +1,4 @@
+import './components/burger.js'
 import './components/team-swiper.js'
 import './components/diplomas-swiper.js'
 import './components/feedback-swiper.js'

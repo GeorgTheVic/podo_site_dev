@@ -38,3 +38,42 @@
     }
   }
 }
+
+.burger-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 500;
+  width: 35px;
+  height: 35px;
+
+  border: 1px solid #fff;
+  border-radius: 10px;
+
+  @include tablet-min {
+    display: none;
+  }
+
+  &__line {
+    position: absolute;
+    top: 45%;
+    left: 12%;
+
+    transform: translate(-50%, -50%);
+
+    display: block;
+    width: 25px;
+    height: 3px;
+    border-radius: 3px;
+
+    background-color: #fff;
+
+    &:first-child {
+      transform: rotate(45deg);
+    }
+
+    &:last-child {
+      transform: rotate(-45deg);
+    }
+  }
+}
