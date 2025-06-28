@@ -1,6 +1,10 @@
 .feedback {
   padding: 100px 0;
-  background: url(/img/feedback/feedback-bg.jpg)  center/cover no-repeat;
+  background: url(/img/feedback/feedback-bg.jpg) center/cover no-repeat;
+
+  @include mobile {
+    padding: 30px 0 170px;
+  }
 
   &__title {
     margin-bottom: 40px;
@@ -9,6 +13,10 @@
     color: #fff;
 
     text-align: center;
+
+    @include mobile {
+      font-size: 30px;
+    }
   }
 
   &__inner {
@@ -41,6 +49,12 @@
   width: 81px;
   height: 81px;
   background: #3D2A79;
+
+  @include mobile {
+    top: auto !important;
+    left: 10%;
+    bottom: -100px;
+  }
 }
 
 .feedback-button-next {
@@ -51,4 +65,10 @@
   width: 81px;
   height: 81px;
   background: #3D2A79;
+
+  @include mobile {
+    top: auto !important;
+    right: 10%;
+    bottom: -100px;
+  }
 }

@@ -1,5 +1,9 @@
 .diplomas {
-  padding: 100px 0;
+  padding: 50px 0 100px;
+
+  @include mobile {
+    padding: 25px 0 150px;
+  }
 
   &__inner {
     position: relative;
@@ -11,6 +15,10 @@
     font-size: 47px;
 
     text-align: center;
+
+    @include mobile {
+      font-size: 30px;
+    }
   }
 
   &__swiper {
@@ -30,6 +38,12 @@
   width: 81px;
   height: 81px;
   background: #00a4d7;
+
+  @include mobile {
+    top: auto !important;
+    left: 10%;
+    bottom: -100px;
+  }
 }
 
 .diplomas-button-next {
@@ -38,4 +52,10 @@
   width: 81px;
   height: 81px;
   background: #00a4d7;
+
+  @include mobile {
+    top: auto !important;
+    right: 10%;
+    bottom: -100px;
+  }
 }

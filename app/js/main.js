@@ -10567,7 +10567,22 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener('DOMContentLoaded', () => {
   const diplomas_swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.diplomas__swiper', {
     modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation],
-    slidesPerView: 4,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    breakpoints: {
+      894: {
+        slidesPerView: 2,
+        spaceBetween: 10
+      },
+      1164: {
+        slidesPerView: 3,
+        spaceBetween: 10
+      },
+      1372: {
+        slidesPerView: 4,
+        spaceBetween: 10
+      }
+    },
     navigation: {
       nextEl: '.diplomas-button-prev',
       prevEl: '.diplomas-button-next'
@@ -10592,7 +10607,22 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener('DOMContentLoaded', () => {
   const feedback_swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.feedback__swiper', {
     modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation],
-    slidesPerView: 4,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    breakpoints: {
+      894: {
+        slidesPerView: 2,
+        spaceBetween: 10
+      },
+      1164: {
+        slidesPerView: 3,
+        spaceBetween: 10
+      },
+      1372: {
+        slidesPerView: 4,
+        spaceBetween: 10
+      }
+    },
     navigation: {
       nextEl: '.feedback-button-prev',
       prevEl: '.feedback-button-next'
@@ -10626,7 +10656,7 @@ document.addEventListener('DOMContentLoaded', () => {
       nextEl: '.services-button-next',
       prevEl: '.services-button-prev'
     },
-    // autoplay: true,
+    autoplay: true,
     delay: 5000,
     loop: true
   });

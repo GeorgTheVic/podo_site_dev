@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
       nextEl: '.services-button-next',
       prevEl: '.services-button-prev',
     },
-    // autoplay: true,
+    autoplay: true,
     delay: 5000,
     loop: true
   });
