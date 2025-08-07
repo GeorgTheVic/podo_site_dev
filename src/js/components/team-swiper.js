@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
       el: '.team__pagination',
       clickable: true,
     },
+    delay: 15000,
     autoplay: true,
-    delay: 5000,
     loop: true
   });
 })

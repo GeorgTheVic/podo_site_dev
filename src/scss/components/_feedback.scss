@@ -41,6 +41,11 @@
   }
 }
 
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 .feedback-button-prev {
   top: 0;
   transform: translateY(50%);
