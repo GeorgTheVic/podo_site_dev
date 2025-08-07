@@ -13,8 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
       nextEl: '.services-button-next',
       prevEl: '.services-button-prev',
     },
-    autoplay: true,
-    delay: 5000,
+    // autoplay: {
+    //   delay: 7000,
+    // },
     loop: true
   });
 })

@@ -10645,15 +10645,15 @@ document.addEventListener('DOMContentLoaded', () => {
     spaceBetween: 10,
     breakpoints: {
       894: {
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 10
       },
       1164: {
-        slidesPerView: 3,
+        slidesPerView: 2,
         spaceBetween: 10
       },
       1372: {
-        slidesPerView: 4,
+        slidesPerView: 3,
         spaceBetween: 10
       }
     },
@@ -10690,8 +10690,9 @@ document.addEventListener('DOMContentLoaded', () => {
       nextEl: '.services-button-next',
       prevEl: '.services-button-prev'
     },
-    autoplay: true,
-    delay: 5000,
+    // autoplay: {
+    //   delay: 7000,
+    // },
     loop: true
   });
 });
@@ -10717,8 +10718,9 @@ document.addEventListener('DOMContentLoaded', () => {
       el: '.team__pagination',
       clickable: true
     },
-    delay: 15000,
-    autoplay: true,
+    autoplay: {
+      delay: 10000
+    },
     loop: true
   });
 });

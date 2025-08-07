@@ -8,15 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
     spaceBetween: 10,
     breakpoints: {
       894: {
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 10,
       },
       1164: {
-        slidesPerView: 3,
+        slidesPerView: 2,
         spaceBetween: 10,
       },
       1372: {
-        slidesPerView: 4,
+        slidesPerView: 3,
         spaceBetween: 10,
       },
     },
