@@ -10681,18 +10681,18 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener('DOMContentLoaded', () => {
   const services_swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.services__swiper', {
     modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Pagination, swiper_modules__WEBPACK_IMPORTED_MODULE_1__.Autoplay],
-    slidesPerView: 1,
     pagination: {
       el: '.services__pagination',
-      clickable: true
+      clickable: true,
+      dynamicBullets: true
     },
     navigation: {
       nextEl: '.services-button-next',
       prevEl: '.services-button-prev'
     },
-    // autoplay: {
-    //   delay: 7000,
-    // },
+    autoplay: {
+      delay: 7000
+    },
     loop: true
   });
 });

@@ -89,7 +89,7 @@
   &__name {
     margin-bottom: 20px;
     font-weight: 500;
-    font-size: 54px;
+    font-size: 50px;
 
     @include tablet {
 
@@ -197,4 +197,10 @@
     height: 81px;
     background: #00a4d7;
   }
+}
+
+.swiper-pagination-bullets {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 200px !important;
 }
